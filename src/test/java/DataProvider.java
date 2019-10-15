@@ -4,7 +4,9 @@ public class DataProvider {
     @org.testng.annotations.DataProvider(name = "statement")
     public static Object[][] testData() {
 
-        final String INVALID_INPUT = "GFJSLAL";
+        final String INVALID_INPUT = "XXOOOXXOL";
+        final String EMPTY_INPUT = "";
+        final String LESS_THEN_NINE_INPUT = "XOXOX";
         final String VALID_INPUT_INVALID_STATE = "XXXXXXXXX";
         final String RESULT_IS_TIE = "XXOOOXXOX";
         final String GAME_OVER_X_WON = "XXXOOXOOX";
@@ -14,6 +16,8 @@ public class DataProvider {
 
         return new Object[][]{
                 {INVALID_INPUT, Data.StateResult.invalidInput.getStateResultName(), 1},
+                {EMPTY_INPUT, Data.StateResult.invalidInput.getStateResultName(), 1},
+                {LESS_THEN_NINE_INPUT, Data.StateResult.invalidInput.getStateResultName(), 1},
                 {VALID_INPUT_INVALID_STATE, Data.StateResult.validInputInvalidState.getStateResultName(), 2},
                 {RESULT_IS_TIE, Data.StateResult.gameOverResultIsTie.getStateResultName(), 3},
                 {GAME_OVER_X_WON, Data.StateResult.gameOverWonX.getStateResultName(), 4},
