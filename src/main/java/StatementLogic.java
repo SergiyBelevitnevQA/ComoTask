@@ -61,7 +61,7 @@ public class StatementLogic extends MethodsForString {
                 message = Data.StateResult.gameStillGoingOToPlay.getStateResultName();
                 break;
             default:
-                message = Data.StateResult.somethingWentWrong.getStateResultName();;
+                message = Data.StateResult.somethingWentWrong.getStateResultName();
                 break;
         }
         return message;
